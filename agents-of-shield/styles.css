@@ -1,0 +1,64 @@
+/* GLOBALS */
+
+:root {
+    --blue: #1565c0;
+    --red:  #c62828;
+    --white: #ffffff;
+    --gray: #999999;
+    --dark-gray: #888888;
+    --black: #505050;
+}
+
+h1,h2,h3,h4,h5,h6,a {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .3rem;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* NAVIGATION */
+
+.nav {
+    background-image: linear-gradient(to bottom, var(--black), rgb(41, 41, 41));
+    position: fixed;
+    height: 3%;
+    width: 100%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.left-nav {
+    width: 50%;
+    height: 100%;
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+    padding-left: .5rem;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.right-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding-right: 1rem;
+}
+
+.nav-link {
+    text-shadow: 1px 1px var(--black);
+    cursor: pointer;
+}
+
+.hero {
+    background-image: url(/assets/hero.jpg);
+    /* background: cover; */
+}
