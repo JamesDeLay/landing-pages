@@ -18,8 +18,5 @@ export default {
     @include grid;
     margin-top: 2rem;
     padding: 1rem;
-    div {
-        @include generate-columns;
-    }
 }
 </style>
