@@ -18,21 +18,17 @@ export default {
     .hero-container {
         height: 75vh;
         width: 100%;
-        background-size: repeat;
         background-image: url("../assets/squares.svg"), linear-gradient(to bottom, $light-blue, $blue);
-        border-bottom: 2px solid black;
+        border-bottom: 1rem solid $dark-gray;
     }
-
     .hero-image {
-        height: 500px;
         position: absolute;
         z-index: 2;
         top: 25%;
-        left: 50%;
+        left: 49%;
         transform: translate(-50%, -25%);
-        background-image: linear-gradient(to bottom, $light-blue, $blue);
+        background: $blue;
         border-radius: 100%;
-        border: 8px solid $yellow;
-        padding: .5rem;
     }
+   
 </style>

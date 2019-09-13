@@ -103,6 +103,6 @@ export default {
 <style lang="scss">
    @import "../styles/utils.scss";
    path {
-      fill: $yellow;
+      fill: $white;
    }
 </style>
