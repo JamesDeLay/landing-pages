@@ -15,7 +15,6 @@ export default {
 <style lang="scss">
 @import "../styles/utils.scss";
 .authors {
-    color: #000;
     margin-top: 2rem;
     padding: 1rem;
 }
