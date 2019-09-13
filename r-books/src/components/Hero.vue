@@ -1,7 +1,7 @@
 <template>
-  <div class="hero-container">
+  <header class="hero-container">
       <hero-svg-image class="hero-image"></hero-svg-image>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -14,20 +14,12 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../styles/utils.scss";
     .hero-container {
-        height: 65vh;
-        width: 100%;
-    }
-
-    .hero-container::before {
-        content: "";
-        height: 65vh;
+        height: 75vh;
         width: 100%;
         background-size: repeat;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: url("../assets/squares.svg"), linear-gradient(to bottom, rgb(66, 67, 133), rgba(47, 48, 97, 1));
+        background-image: url("../assets/squares.svg"), linear-gradient(to bottom, $light-blue, $blue);
         border-bottom: 2px solid black;
     }
 
@@ -35,5 +27,12 @@ export default {
         height: 500px;
         position: absolute;
         z-index: 2;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -25%);
+        background-image: linear-gradient(to bottom, $light-blue, $blue);
+        border-radius: 100%;
+        border: 8px solid $yellow;
+        padding: .5rem;
     }
 </style>

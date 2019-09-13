@@ -19,7 +19,12 @@
 </script>
 
 <style lang="scss">
-    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    @import "../styles/utils.scss";
+
+// For media query    // 
+//     @include for-size(phone-only) {    
+//       font-size: 1rem; 
+//    }
 
     .nav-bar {
         position: fixed;
@@ -27,34 +32,30 @@
         width: 100%;
         height: 5%;
         display: flex;
-        background-image: linear-gradient(to bottom, rgba(52, 52, 52, 1), rgb(44, 44, 44));
+        background-image: linear-gradient(to bottom, $gray, $dark-gray);
     }
 
     .logo {
+        @include flex-align-center;
         width: 40%;
-        display: flex;
-        align-items: center;
         padding-left: 2rem;
         cursor:pointer;
         a {
-            color: rgba(255, 230, 109, 1);
+            @include header;
+            color: $yellow;
             font-size: 3rem;
-            font-family: "Montserrat";
         }
     }
     
-
     .links {
-        display: flex;
+        @include flex-align-center;
         justify-content: space-around;
-        align-items: center;
         width: 60%;
         a {
+            @include header;
             font-size: 1.5rem;
-            color: rgba(255, 230, 109, 1);
-            font-family: "Montserrat";
+            color: $yellow;
             text-transform: uppercase;
-            letter-spacing: .3rem;
         }
     }
 
@@ -64,7 +65,7 @@
     }
 
     .text:hover {
-        color: rgba(255, 230, 109, 1);
+        color: $yellow;
         transform: scale(1.25);
         z-index: 1;
     }

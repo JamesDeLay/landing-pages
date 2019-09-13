@@ -1,8 +1,9 @@
 import Vue from "vue";
 import App from "./App.vue";
 
-// Add Tailwind CSS
-import "./assets/tailwind.css";
+// Add Reset Sass
+import "./styles/reset.scss";
+import "./styles/utils.scss";
 
 Vue.config.productionTip = false;
 
