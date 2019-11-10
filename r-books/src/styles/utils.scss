@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+// Color Palette
+
+$white: rgba(255, 255, 250, 1);
+$gray: rgba(52, 52, 52, 1);
+$dark-gray: rgb(44, 44, 44);
+$light-blue: rgb(77, 79, 161);
+$blue: rgba(47, 48, 97, 1);
+$yellow: rgba(255, 230, 109, 1);
+$red: rgba(140, 39, 30, 1);
+
+// Frequently used classes
+@mixin header {
+    font-family: "Montserrat";
+    letter-spacing: .3rem;
+}
+
+@mixin flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+// Responsive Grid
+
+$breakpoints: (
+  xs: 32rem,
+  sm: 48rem,
+  md: 72rem,
+  lg: 96rem,
+  xl: 102rem,
+  xx: 120rem
+);
+
+// number of columns variable
+$num-of-columns: 12;
+
+// media query mixin
+@mixin break($size) {  
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+// Grid Container
+@mixin grid {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 1rem;
+}
+
+// Loop Breakpoints
+@mixin generate-columns {
+  @each $key, $value in $breakpoints {
+    @for $i from 1 through $num-of-columns {
+      .col-#{$key}-span-#{$i} {
+        flex: 0 0 100%;
+        @include break($key) {
+          flex: 0 0 #{$i / $num-of-columns * 100%};
+        }
+      }
+    }
+  }
+}
